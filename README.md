@@ -11,7 +11,11 @@ This project is currently in early development. Version 0.2.0 establishes the ca
 - Models and validates standard playing cards
 - Tracks known and unknown cards using a 52-card deck
 - Draws hypothetical unknown cards for future probability simulations
-- Includes automated tests for card and deck behavior
+- Identifies all standard Texas Hold'em hand types
+- Handles kickers, tie comparisons, and ace-low straights
+- Rejects duplicate cards and invalid hand sizes
+- Includes automated tests for card, deck, and hand-evalution behavior
+
 
 ## Running the program
 
@@ -26,6 +30,10 @@ py -m unittest discover -s tests
 ```
 
 ## Releases
+
+### v0.3.0 - Hand Evaluator
+
+Added a Texas Hold'em hand-evaluation engine that identifies every standard hand type and selects the strongest five-card hand from five to seven available cards.
 
 ### v0.2.0 - Deck System
 
