@@ -1,5 +1,6 @@
 from itertools import combinations
 
+
 class HandEvaluator:
     """ Evaluates and compares poker hands """
 
@@ -15,6 +16,7 @@ class HandEvaluator:
         8: "Straight Flush"
     }
 
+
     @staticmethod
     def count_ranks(cards):
         """ Count how many times each card rank appears """
@@ -29,6 +31,7 @@ class HandEvaluator:
                 rank_counts[value] = 1
 
         return rank_counts
+
 
     @staticmethod
     def get_straight_high(cards):
@@ -47,12 +50,14 @@ class HandEvaluator:
 
         return None
 
+
     @staticmethod
     def is_flush(cards):
         """ Return True when all five cards have same suit """
         suits = {card.suit for card in cards}
 
         return len(suits) == 1
+
 
     @staticmethod
     def score_five_cards(cards):
@@ -130,6 +135,7 @@ class HandEvaluator:
 
         # If no ranks repeat, score the hand using its cards in descending order.
         return 0, *all_ranks
+
 
     @staticmethod
     def evaluate_hand(cards):

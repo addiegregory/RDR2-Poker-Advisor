@@ -5,11 +5,14 @@ from deck import Deck
 
 class TestDeck(unittest.TestCase):
 
+
     def setUp(self):
         self.deck = Deck()
 
+
     def test_deck_contains_52_cards(self):
         self.assertEqual(len(self.deck), 52)
+
 
     def test_all_cards_are_unique(self):
         card_pairs = []
@@ -19,6 +22,7 @@ class TestDeck(unittest.TestCase):
 
         self.assertEqual(len(card_pairs), len(set(card_pairs)))
 
+
     def test_remove_known_card(self):
         removed_card = self.deck.remove_card("A", "Spades")
 
@@ -26,17 +30,20 @@ class TestDeck(unittest.TestCase):
         self.assertEqual(removed_card.suit, "Spades")
         self.assertEqual(len(self.deck), 51)
 
+
     def test_card_cannot_be_removed_twice(self):
         self.deck.remove_card("A", "Spades")
 
         with self.assertRaises(ValueError):
             self.deck.remove_card("A", "Spades")
 
+
     def test_draw_unknown_card(self):
         drawn_card = self.deck.deal()
 
         self.assertIsInstance(drawn_card, Card)
         self.assertEqual(len(self.deck), 51)
+
 
     def test_reset_restores_deck(self):
         self.deck.remove_card("A", "Spades")
@@ -45,12 +52,14 @@ class TestDeck(unittest.TestCase):
 
         self.assertEqual(len(self.deck), 52)
 
+
     def test_draw_from_empty_deck(self):
         for _ in range(52):
             self.deck.deal()
 
         with self.assertRaises(IndexError):
             self.deck.deal()
+
 
     def test_shuffle_preserves_cards(self):
         cards_before = {

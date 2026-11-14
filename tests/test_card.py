@@ -10,23 +10,28 @@ class TestCard(unittest.TestCase):
         self.assertEqual(card.rank, "A")
         self.assertEqual(card.suit, "Spades")
 
+
     def test_invalid_rank(self):
         with self.assertRaises(ValueError):
             Card("20", "Spades")
 
+
     def test_invalid_suit(self):
         with self.assertRaises(ValueError):
             Card("A", "Stars")
+
 
     def test_card_display(self):
         card = Card("K", "Hearts")
 
         self.assertEqual(str(card), "K of Hearts")
 
+
     def test_rank_value(self):
         card = Card("Q", "Diamonds")
 
         self.assertEqual(card.get_value(), 12)
+
 
     def test_card_comparison(self):
         queen = Card("Q", "Hearts")

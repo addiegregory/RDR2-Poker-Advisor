@@ -31,6 +31,7 @@ class Card:
         "A": 14
     }
 
+
     def __init__(self, rank: str, suit: str):
         if rank not in Card.VALID_RANKS:
             raise ValueError(f"Invalid rank: {rank}")
@@ -41,11 +42,14 @@ class Card:
         self.rank = rank
         self.suit = suit
 
+
     def __str__(self) -> str:
         return f"{self.rank} of {self.suit}"
 
+
     def get_value(self) -> int:
         return Card.RANK_VALUES[self.rank]
+
 
     def __lt__(self, other: "Card") -> bool:
         return self.get_value() < other.get_value()
