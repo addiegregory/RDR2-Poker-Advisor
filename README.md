@@ -47,8 +47,6 @@ Confidence: Moderate
 Reason: Your estimated equity is greater than the equity required to call.
 ```
 
-Results may vary slightly because unknown cards are generated randomly during each simulation.
-
 ## How It Works
 
 1. Removes the player and community cards from a virtual 52-card deck.
