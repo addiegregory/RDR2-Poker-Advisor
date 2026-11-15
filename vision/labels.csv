@@ -1,0 +1,5 @@
+filename,player_cards,community_cards
+hand01_preflop_full.png,"4S 2C",""
+hand01_flop_full.png,"4S 2C","QD 10S 7S"
+hand01_turn_full.png,"4S 2C","QD 10S 7S 6D"
+hand01_river_full.png,"4S 2C","QD 10S 7S 6D 8S"

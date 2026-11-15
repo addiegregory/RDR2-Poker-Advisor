@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# RDR2 Poker Advisor generated files
+vision/card_crops/
