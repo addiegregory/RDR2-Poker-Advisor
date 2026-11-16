@@ -6,6 +6,9 @@ A Python command-line application that analyzes Texas Hold'em situations in *Red
 
 Version 1.0.0 is the first complete command-line release. Users can manually enter an RDR2 poker situation and receive a probability-based recommendation with an explanation.
 
+## In Development
+Screenshot-based card recognition using computer vision. The advisor will identify player and community cards directly from RDR2 gameplay.
+
 ## Current Features
 
 - Accepts compact card input such as `AS`, `KH`, and `10C`
@@ -59,6 +62,8 @@ Reason: Your estimated equity is greater than the equity required to call.
 
 Opponent cards are currently modeled as uniformly random. Version 1.0.0 does not yet account for individual NPC betting patterns, table position, previous actions, or different opponent play styles.
 
+Computer-vision support is currently experimental and not included in the stable v1.0.0 release.
+
 ## Running the Program
 
 From the project folder, run:
@@ -73,21 +78,9 @@ py -m unittest discover -s tests
 
 ## Releases
 
-### v1.0.0 - Interactive Poker Advisor
+See the [GitHub Releases](https://github.com/addiegregory/RDR2-Poker-Advisor/releases) page for version history and release notes.
 
-Added manual game input, Monte Carlo equity simulation, pot-odds calculations, stack-aware recommendations, explanations, and expanded automated testing.
-### v0.3.0 - Hand Evaluator
-
-Added a Texas Hold'em hand-evaluation engine that identifies every standard hand type and selects the strongest five-card hand from five to seven available cards.
-
-### v0.2.0 - Deck System
-
-Added the internal deck system used to track known and unknown cards during poker analysis, along with automated tests.
-
-### v0.1.0 - Initial Release
-
-Added card representation, validation, readable display, numerical rank values, and rank comparison.
-
+Current stable release: **v1.0.0 - Interactive Poker Advisor**
 ## Disclaimer
 
 This is an independent educational project and is not affiliated with or endorsed by Rockstar Games or Take-Two Interactive.
